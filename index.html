@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akarsh Singh</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/93287ad2ca.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     <div id="header">
+      <div class="container">
+        <nav>
+            <img src="akarsh.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Website Designer</p>
+            <h2>Hi, I'm <span>Akarsh</span> <br> Singh From India</h2>
+        </div>
+      </div>
+     </div>
+     <!---------about-------->
+     <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="user.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello Everyone I am Akarsh singh.
+                        And I am student of class-7, <br>In a school
+                        named G.D. MEMORIAL YONKER'S ENGLISH SCHOOL <br>
+                        in khaniyara of Laganj,Azamgarh. It is the <br>
+                        best school of the area because It is powered <br>
+                        by an institution named LEAD School you can visit <br>
+                        to LEAD School because It is present at every place <br>
+                        of India.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Website Design</span><br>Designing Web interfaces</li>
+                            <li><span>Python Programming</span><br>Simulator Apps</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>Web Development</span><br>Learned from Youtube</li>
+                            <li><span>Python Programming</span><br>learned from My class</li>
+                            <li><span>App Development</span><br>Learned From App named Programming Hub</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!-----------services---------->
+     <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>You can contact to me for <br>Designing a Website</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-python"></i>
+                    <h2>Python Programming</h2>
+                    <p>You can contact to me for Building a Simulator in Python</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Designing</h2>
+                    <p>You can contact to me for Designing an application</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!------------contact----------->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>akarshsingh11213@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>888-791-3482</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/Akarsh289/akarsh289.github.io.git"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://instagram.com/pritisingh479?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="/images/my-cv.pdf" class="btn">Download Cv</a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form action="https://formspree.io/f/moqodpjj" method="POST">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <input type="number" name="Phone" placeholder="Phone no." required>
+                        <textarea name="message" placeholder="Your Message" rows="6"></textarea>
+                        <button type="submit" class="btn-2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            copyright © akarsh. Made with <i class="fa-solid fa-heart"></i>  by Akarsh Singh
+        </div>
+     </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+ <script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+ </script>
+</body>
+</html>
